@@ -47,6 +47,6 @@ def test_get_user_by_email_no_user_found():
 
     controller = UserController(mock_dao)
 
-    with pytest.raises(IndexError):
-        controller.get_user_by_email("missing@example.com")
-        
+    result = controller.get_user_by_email("missing@example.com")
+
+    assert result is None
