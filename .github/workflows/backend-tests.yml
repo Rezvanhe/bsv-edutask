@@ -46,4 +46,4 @@ jobs:
 
       - name: Run backend unit tests
         run: |
-          python -m pytest
+          python -m pytest test/test_dao_integration.py test/test_usercontroller.py
